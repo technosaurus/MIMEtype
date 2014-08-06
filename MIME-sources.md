@@ -15,3 +15,4 @@ I haven't gone through them all, so if you are looking for the correct MIME-type
 - http://www.garykessler.net/library/file_sigs.html
 - http://www.digitalpreservation.gov/formats/fdd/descriptions.shtml
 - https://github.com/file/file/tree/master/magic/Magdir
+- https://github.com/mate-desktop/mate-mime-data/blob/master/mate-vfs-mime-magic
