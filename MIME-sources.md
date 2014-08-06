@@ -8,6 +8,7 @@ I haven't gone through them all, so if you are looking for the correct MIME-type
 - http://www.freeformatter.com/mime-types-list.html#mime-types-list
 - http://svn.apache.org/viewvc/httpd/httpd/trunk/docs/conf/mime.types?view=annotate
 - http://www.webmaster-toolkit.com/mime-types.shtml
+- http://www.stdicon.com/mimetypes (json formatted)
 
 **By magic**
 - http://en.wikipedia.org/wiki/List_of_file_signatures
