@@ -4,7 +4,18 @@
 #include <string.h>
 #include <libgen.h> //basename TODO replace it with const version
 #include <fcntl.h>  //open
-enum{APPLICATION, AUDIO, CHEMICAL, IMAGE, INODE, MESSAGE, MODEL, MULTIPART, TEXT, VIDEO};
+
+#define APPLICATION "\x00"
+#define AUDIO "\x01"
+#define CHEMICAL "\x02"		
+#define IMAGE "\x03"		
+#define INODE "\x04"		
+#define MESSAGE "\x05"		
+#define MODEL "\x06"		
+#define MULTIPART "\x07"		
+#define TEXT "\08"		
+#define VIDEO "\09"
+
 const char *major_types[]={"application","audio","chemical","image","inode","message","model","multipart","text","video"};
 #define LEN(x) (sizeof(x)/sizeof(x[0])-2)
 
