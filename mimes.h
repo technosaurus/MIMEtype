@@ -1175,7 +1175,7 @@ static const char *mimes[] = {
 	"wmls",	TEXT	"vnd.wap.wmlscript",
 	"wmlsc",	APPLICATION	"vnd.wap.wmlscriptc",
 	"wmv",	VIDEO	"x-ms-wmv",
-	"wmx",	AUDIO	"x-ms-asx",
+	"wmx",	AUDIO	"x-ms-wmx",
 	"wmz",	APPLICATION	"x-ms-wmz",
 	"woff",	APPLICATION	"font-woff",
 	"wp",	APPLICATION	"vnd.wordperfect",
