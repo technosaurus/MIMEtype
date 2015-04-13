@@ -1,7 +1,7 @@
 /* sort by magic in ascii order @ offset 0 for memcmp. A-Z comes before a-z
  * 1st char in magic (1st) string is the length in hex
- * followed by major and minor typr strings
- * 1st char in mime (2nd) string is the major type in hex
+ * followed by major and minor type strings
+ * 1st char in mime (2nd) string indicates the major type in hex (using defined types)
  *
  * "<len>" "<Magic>", MAJOR-TYPE "minor-type"
  */
@@ -109,6 +109,7 @@ static const char *mimes0[] = {
 	"\x03" "P5\x00", IMAGE "x-portable-greymap",
 	"\x03" "P6\x00", IMAGE "x-portable-pixmap",
 	"\x03" "P7\x00", IMAGE "x-portable-pixmap",
+	"\x0C" "P7\n#MTPAINT#", IMAGE "x-portable-multimap",
 	"\x03" "PBF", IMAGE "x-unknown",
 	"\x04" "PDN3", IMAGE "x-paintnet",
 	"\x05" "PFS1\x0A", IMAGE "x-pfs",
