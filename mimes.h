@@ -906,6 +906,7 @@ static const char *mimes[] = {
 	"pma",	APPLICATION	"x-perfmon",
 	"pmc",	APPLICATION	"x-perfmon",
 	"pml",	APPLICATION	"vnd.ctc-posml", /*"x-perfmon"*/
+	"pmm",	IMAGE	"x-portable-multimap",
 	"pmr",	APPLICATION	"x-perfmon",
 	"pmw",	APPLICATION	"x-perfmon",
 	"png",	IMAGE	"png",
