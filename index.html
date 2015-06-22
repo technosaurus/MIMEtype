@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mimetype by technosaurus</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mimetype</h1>
+        <p>Public domain MIME-type detector using file extensions and file signatures</p>
+
+        <p class="view"><a href="https://github.com/technosaurus/MIMEtype">View the Project on GitHub <small>technosaurus/MIMEtype</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/technosaurus/MIMEtype/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/technosaurus/MIMEtype/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/technosaurus/MIMEtype">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="mimetype" class="anchor" href="#mimetype" aria-hidden="true"><span class="octicon octicon-link"></span></a>MIMEtype</h1>
+
+<p>Public domain MIME-type detector using file extensions and file signatures</p>
+
+<p><strong>How it Works</strong></p>
+
+<p>Detection by extension will take a file name and first check if the file name
+is a registered MIME-type (LICENSE -&gt; text/plain for example)
+Then it will recursively check the largest extension (.tar.bz2 vs. just .bz2)
+The extension list is in all lower case and sorted in alphabetical order so
+a binary search can be done (n searches for 2^n entries)</p>
+
+<p><em>Note: MIMEtype includes its own version of strcasecmp for speed, (for inlining</em>
+<em>and removes superfluous tolower() on internal strings)</em></p>
+
+<p>The file signatures are sorted by magic in ascii order @ offset X for memcmp.
+This allows a binary search on file signatures starting at common offsets,
+(the majority of file types use 0, 4 or 8 byte offsets).  All other
+offsets are handled last using a linear search.</p>
+
+<p><strong>TODO</strong></p>
+
+<ul>
+<li>add more types (ongoing - submit an issue here if one is broken/missing)</li>
+<li>win32 version of the magic detection (FILE* instead of fd)</li>
+<li>config menu to enable/disable types (for servers that only want some)</li>
+<li>cleanups
+
+<ul>
+<li>the MAGIC tables are difficult to read and maintain</li>
+<li>keep the tables externally for processing</li>
+</ul>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/technosaurus">technosaurus</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
