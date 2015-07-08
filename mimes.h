@@ -41,7 +41,7 @@ static const char *mimes[] = {
 	"afm",	APPLICATION	"x-font-afm",
 	"afp",	APPLICATION	"vnd.ibm.modcap",
 	"ag",	IMAGE	"x-applix-graphics",
-	"ahead",	APPLICATION	"vnd.ahead.space","
+	"ahead",	APPLICATION	"vnd.ahead.space",
 	"ai",	APPLICATION	"postscript", /*"illustrator"*/
 	"aif",	AUDIO	"x-aiff",
 	"aifc",	AUDIO	"x-aiff",
