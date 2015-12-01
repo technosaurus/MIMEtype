@@ -22,8 +22,7 @@ offsets are handled last using a linear search.
 **TODO**
 
 - add more types (ongoing - submit an issue here if one is broken/missing)
+- add MIMEverify() to ensure extension matches magic
 - win32 version of the magic detection (FILE* instead of fd)
 - config menu to enable/disable types (for servers that only want some)
-- cleanups
-    - the MAGIC tables are difficult to read and maintain
-    - keep the tables externally for processing
+  - just delete lines from header files for now
