@@ -26,3 +26,9 @@ offsets are handled last using a linear search.
 - win32 version of the magic detection (FILE* instead of fd)
 - config menu to enable/disable types (for servers that only want some)
   - just delete lines from header files for now
+- basic charset detection @ offset 0
+  - utf-8 "xEF\xBB\xBF"
+  - utf-16be "\xFE\xFF"
+  - utf-16le "\xFF\xFE"
+  - utf-32be "\x00\x00\xFE\xFF"
+  - utf-32le "\xFF\xFE\x00\x00"
