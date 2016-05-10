@@ -10,6 +10,7 @@ I haven't gone through them all, so if you are looking for the correct MIME-type
 - http://www.webmaster-toolkit.com/mime-types.shtml
 - http://www.stdicon.com/mimetypes (json formatted)
 - http://fileformats.archiveteam.org/wiki/File_Formats
+- http://www.garykessler.net/library/file_sigs.html
 
 **By magic**
 - http://en.wikipedia.org/wiki/List_of_file_signatures
