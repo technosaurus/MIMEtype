@@ -8,6 +8,7 @@
 
 static const char *mimes0[] = {
 	"\x05" "\x00\x01\x00\x00\x00", APPLICATION "x-font-ttf",
+    "\x04" "\0asm", APPLICATION "wasm",
 	"\x0C" "\x04%!PS-Adobe-", APPLICATION "postscript",
 	"\x0D" "\x1B%-12345X%!PS", APPLICATION "postscript",
 	"\x02" "\x1F\x8B", APPLICATION "x-gzip",
@@ -41,6 +42,7 @@ static const char *mimes0[] = {
 	"\x0B" "#?RADIANCE\x0A", IMAGE "vnd.radiance",
 	"\x0B" "%!PS-Adobe-", APPLICATION "postscript",
 	"\x05" "%PDF-", APPLICATION "pdf",
+    "\x04" "(\xB5/\XFD", APPLICATION "zstd",
 	"\x05" "*mbx*", APPLICATION "mbox",
 	"\x1C" "-----BEGIN PGP MESSAGE-\x00\x1E---", APPLICATION "pgp",
 	"\x1E" "-----BEGIN PGP SIGNATURE-\x00\x03.\"", APPLICATION "pgp-signature",
@@ -136,7 +138,9 @@ static const char *mimes0[] = {
 	"\x04" "fLaC", AUDIO "x-flac",
 	"\x0B" "filedesc://", APPLICATION "x-ia-arc",
 	"\x10" "riff.\x91\xCF\x11\xA5\xD6(\xDB\x04\xC1\x00\x00", AUDIO "x-w64",
-	"\x05" "\rtf\x00", TEXT "rtf",
+	"\x05" "\\rtf\x00", TEXT "rtf",
+    "\x04" "wOF2", FONT "woff2",
+    "\x04" "wOFF", FONT "woff",
 	"\x09" "\x89LZO\x00\x0D\x0A\x1A\x0A", APPLICATION "x-lzop",
 	"\x08" "\x89PNG\x0D\x0A\x1A\x0A", IMAGE "png",
 	"\x04" "\x8AJNG", VIDEO "x-jng",
