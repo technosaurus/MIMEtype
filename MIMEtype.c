@@ -7,16 +7,17 @@
 
 #define APPLICATION "\x00"
 #define AUDIO "\x01"
-#define CHEMICAL "\x02"		
-#define IMAGE "\x03"		
-#define INODE "\x04"		
-#define MESSAGE "\x05"		
-#define MODEL "\x06"		
-#define MULTIPART "\x07"		
-#define TEXT "\08"		
-#define VIDEO "\09"
+#define CHEMICAL "\x02"
+#define FONT "\x03"
+#define IMAGE "\x04"
+#define INODE "\x05"
+#define MESSAGE "\x06"
+#define MODEL "\x07"
+#define MULTIPART "\x08"
+#define TEXT "\x09"
+#define VIDEO "\x0a"
 
-const char *major_types[]={"application","audio","chemical","image","inode","message","model","multipart","text","video"};
+const char *major_types[]={"application","audio","chemical","font","image","inode","message","model","multipart","text","video"};
 #define LEN(x) (sizeof(x)/sizeof(x[0])-2)
 
 #include "mimes0.h"
@@ -57,7 +58,7 @@ static const char *mime_search(const char **mimes,size_t len,const char *buf){
 	size_t bot=0, top=len, i=((bot+top)>>1)&(~1);
 	int cmp;
 	for (; bot<=top && i<=len; i=((bot+top)>>1)&(~1)){
-		cmp=memcmp(buf,mimes[i]+1,*mimes[i]);
+		cmp=memcmp(buf,mimes[i]+1,*mimes[i]); //tod just check 1 letter 1st
 		if (! cmp) return mimes[i+1]; //match found
 		else if (cmp>0) bot=i+2;
 		else top=i-2;
